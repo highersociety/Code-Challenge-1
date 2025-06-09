@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chai Bora Calculator</title>
+</head>
+<body>
+  <h1>Chai Bora Ingredient Calculator ☕</h1>
+  <label>How many cups of chai would you like to make?</label>
+  <input type="number" id="cups" />
+  <button onclick="calculateChai()">Calculate</button>
+  <pre id="output"></pre>
+
+  <script>
+    function calculateChai() {
+      const cups = Number(document.getElementById("cups").value);
+      const water = cups * 200;
+      const milk = cups * 50;
+      const teaLeaves = cups * 1;
+      const sugar = cups * 2;
+
+      const result = `To make ${cups} cups of Kenyan Chai, you will need:\n` +
+                     `Water: ${water} ml\nMilk: ${milk} ml\nTea Leaves: ${teaLeaves} tbsp\nSugar: ${sugar} tsp\n\nEnjoy your Chai Bora!`;
+
+      document.getElementById("output").textContent = result;
+    }
+  </script>
+</body>
+</html>

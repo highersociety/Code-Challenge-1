@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boda Fare Estimator</title>
+</head>
+<body>
+  <h1>Boda Boda Fare Estimator 🛵</h1>
+  <label>Enter distance in kilometers:</label>
+  <input type="number" id="distance" />
+  <button onclick="calculateFare()">Estimate Fare</button>
+  <pre id="output"></pre>
+
+  <script>
+    function calculateFare() {
+      const km = Number(document.getElementById("distance").value);
+      const base = 50;
+      const perKm = 15;
+      const distanceCharge = km * perKm;
+      const total = base + distanceCharge;
+
+      const result = `Uko kwote? Io ni ${km} km:\nUkikalia Pikipiki: KES ${base}\nMpaka Uko: KES ${distanceCharge}\nTotal: KES ${total}\n\nPanda Pikipiki!`;
+
+      document.getElementById("output").textContent = result;
+    }
+  </script>
+</body>
+</html>

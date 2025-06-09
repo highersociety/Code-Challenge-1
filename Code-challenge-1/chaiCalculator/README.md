@@ -9,5 +9,14 @@ This repository contains solutions to the Week 1 JavaScript Code Challenges:
 Each solution is written in vanilla JavaScript and designed to prompt user input and return readable console outputs.
 
 ---
+## Project Setup
+Each folder contains a JavaScript file for the related challenge.
+To run:
+1. Open the browser console.
+2. Copy-paste the code and press Enter.
 
-## 🛠️ Project Setup
+## Author
+- [JUSTINE KAMAU GICHURE]
+
+## License
+This project is licensed under the MIT License.

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mobile Money Fee Estimator</title>
+</head>
+<body>
+  <h1>Mobile Money Transaction Fee Estimator 📱</h1>
+  <label>Enter amount to send (KES):</label>
+  <input type="number" id="amount" />
+  <button onclick="estimateFee()">Estimate Fee</button>
+  <pre id="output"></pre>
+
+  <script>
+    function estimateFee() {
+      const amount = Number(document.getElementById("amount").value);
+      let fee = amount * 0.015;
+      fee = Math.max(10, Math.min(fee, 70));
+      const total = amount + fee;
+
+      const result = `Sending KES ${amount}:\nCalculated Transaction Fee: KES ${fee}\nTotal amount to be debited: KES ${total}\n\nSend Money Securely!`;
+
+      document.getElementById("output").textContent = result;
+    }
+  </script>
+</body>
+</html>
